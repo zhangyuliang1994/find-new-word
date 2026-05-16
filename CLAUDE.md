@@ -15,9 +15,14 @@
 
 ## 分支规范
 
-- **只允许 push 到 `claude/` 前缀的分支**,例如 `claude/keywords-2026-05-17`、`claude/draft-genshin-5-7-leak`。
-- **禁止直接在 `main` 分支提交**任何内容。如果当前在 `main`,先切到 `claude/...` 分支再开始写。
-- 一次产出对应一个 PR,标题简要说明产出内容。
+- 当 routine session 运行时,会自动分配一个 claude/ 前缀的会话分支
+  (命名随机,如 claude/hopeful-sagan-daAWe)
+- 在 routine 上下文中工作时,直接在已分配的会话分支上提交,
+  不要主动切换分支或新建分支
+- 严禁直接在 main 分支提交内容产出
+- PR 由人工在 session 详情页点击 Create PR 按钮创建,
+  Claude 不需要自己尝试开 PR
+- 本地手动运行(非 routine)时,按常规 git 流程
 
 ## 写作风格
 
